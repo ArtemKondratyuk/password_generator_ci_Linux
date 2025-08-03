@@ -23,7 +23,7 @@ jobs:
 
           - name: Build Linux binary with PyInstaller  
             run: |             
-             pyinstaller --noconfirm --onefile main.py
+             pyinstaller --noconfirm --onefile password_generator_Linux main.py
              mv dist/main dist/password_generator
 
           - name: Upload artifact
