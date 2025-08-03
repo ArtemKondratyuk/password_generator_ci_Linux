@@ -18,13 +18,12 @@ jobs:
 
       - name: Install appimage-builder
         run: |
-          sudo add-apt-repository ppa:appimage-dev/appimage-tools -y
-          sudo apt update
-          sudo apt install -y appimage-builder
+          wget https://github.com/AppImageCrafters/appimage-builder/releases/latest/download/appimage-builder-x86_64.AppImage
+          chmod +x appimage-builder-x86_64.AppImage
 
       - name: Build AppImage
         run: |
-          appimage-builder --recipe appimage-builder.yml
+          ./appimage-builder-x86_64.AppImage --recipe appimage-builder.yml
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
