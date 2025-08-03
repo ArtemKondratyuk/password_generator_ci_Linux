@@ -24,10 +24,10 @@ jobs:
           - name: Build Linux binary with PyInstaller  
             run: |             
              pyinstaller --noconfirm --onefile main.py
-             mv dist/main dist/password_generator
+             mv dist/main dist/password_generator_lx
 
           - name: Upload artifact
             uses: actions/upload-artifact@v4
             with:
               name: password-generator-linux
-              path: dist/main.py
+              path: dist/password_generator_lx
