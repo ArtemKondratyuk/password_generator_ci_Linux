@@ -27,7 +27,7 @@ jobs:
           appimage-builder --recipe appimage-builder.yml
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: PasswordGenerator.AppImage
           path: ./PasswordGenerator-x86_64.AppImage
